@@ -1,3 +1,345 @@
-h1 {
-    color: red;
+
+body {
+    background-color: #DADADA;
+    padding: 80px 97px 0;
+}
+
+.bl-background {
+    background-color: #DADADA;
+}
+
+.shell-bl-bought, .shell-bl-list {
+    background-color: #DADADA;
+    padding: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.shell-bl-bought {
+    width: 30%;
+    float: right;
+}
+
+.shell-bl-list {
+    width: 70%;
+}
+
+.bl-list, .bl-bought {
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.bl-list {
+   min-width: 450px;
+}
+
+.bl-row {
+    display: block;
+    border-top: 1px solid rgba(34,36,38,.15);
+    padding: 7px;
+}
+
+.bl-product_name, .bl-count, .bl-buttons {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/*
+*
+*Центральна колонка - стрічка додавання товару
+*
+*/
+
+.add-row-shell {
+    padding: 12px 15px;
+}
+
+.add-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 37px;
+}
+
+.add-field {
+    flex: auto;
+    height: 37px;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    font-size: 15px;
+    border: 1px solid rgba(34,36,38,.15);
+    border-right-color: transparent;
+    border-radius: 4px 0 0 4px;
+    
+}
+
+.add-field:focus {
+    outline: none;
+}
+
+.add-button {
+    background-color: #2185D0;
+    color: #FFF;
+    border: none;
+    height: 37px;
+    width: 100px;
+    
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    box-shadow: 0 -.3em 0 0 rgba(34,36,38,.15) inset;
+}
+
+.add-button:hover {
+    cursor: pointer;
+    background-color: #1678c2;
+}
+
+.add-button:hover:focus {
+    outline: none;
+    background-color: #0d71bb;
+}
+
+.add-button:hover:focus:active {
+    background-color: #1a69a4;
+}
+
+/*
+*
+*Ліва головнка колонка - права колонка - кнопки "Куплено", "х"(відміна)
+*
+*/
+
+.bl-buttons {
+    width: 40%;
+    float: right;
+}
+
+.bl-buttons-shell {
+    float: right;
+}
+
+.bl-buttons-boughted, .bl-buttons-cancel {
+    font-family: sans-serif;
+    font-size: 11px;
+    height: 32px;
+}
+
+.bl-buttons-cancel {
+    width: 32px;
+    
+    background-color: #DB2828;
+    box-shadow: 0 -.3em 0 0 rgba(34,36,38,.15) inset;
+    color: white;
+    
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+    
+    border: none;
+    border-radius: 6px;
+    
+    cursor: pointer;
+    outline: none;
+}
+
+.bl-buttons-boughted {
+    width: 80px;
+    
+    font-family: inherit;
+    font-weight: 600;
+    
+    margin-right: 3px;
+    
+    background-color: ;
+    color: rgba(0,0,0,.6);
+}
+
+/*
+*
+*Центральна колонка - назва товару (ліва колонка)
+*
+*/
+
+.bl-product_name {
+    width: 40%;
+    float: left;
+    padding: 7px;
+    
+}
+
+.bl-product_label {
+    margin-left: 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: rgba(0,0,0,.87);
+}
+
+/*
+*
+*Центральна колнка - центральні кнопки (декримент, інкримент, каунтер)
+*
+*/
+
+.bl-count {
+    width: 20%;
+    text-align: center;
+}
+
+/*Каунтер*/
+.bl-label {
+    background-color: #E8E8E8;
+    color: rgba(0,0,0,.6);
+    
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    margin-right: 3px;
+    margin-left: 3px;
+    
+    border-radius: 3px;
+}
+
+/*Червона та Зелена кнопки*/
+
+.bl-plus, .bl-minus {
+    border-radius: 50%;
+    border: none;
+    
+    color: white;
+    
+    width: 31px;
+    height: 31px;
+    
+    font-size: 18px;
+    font-weight: 500;
+    
+    cursor: pointer;
+    outline: none;
+}
+
+.bl-plus {
+    background-color: #21BA45;
+    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
+}
+
+.bl-plus:hover {
+    background-color: #16ab39;
+}
+
+.bl-plus:hover:focus:active {
+    background-color: #198f35;
+}
+
+.bl-minus {
+    background-color: #db2828;
+    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
+}
+
+.bl-minus:hover {
+    background-color: #d01919;
+}
+
+.bl-minus:hover:focus:active {
+    background-color: #b21e1e;
+}
+
+/*Вирівняти по центру символ '-'*/
+.button-minus-label {
+    display: inline-block;
+    padding-bottom: 1px;
+}
+
+/*
+*
+*Права колонка - інформація "Залишелося", "Куплено"
+*
+*/
+
+.bl-bought {
+    min-width: 180px;  
+}
+
+.bl-title {
+    border-top: 1px solid rgba(34,36,38,.15);
+    padding: 0 15px;
+}
+
+.bl-row-right {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-top: 1px solid rgba(34,36,38,.15);
+    padding: 10px 10px;
+}
+
+.bl-bought-last, .bl-bought-bought {
+    display: inline;
+    background-color: rgba(232, 232, 232, 1);
+    padding: 6px 6px;
+    margin: 2px 2px;
+    border-radius: 3px;
+    
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.bl-bought-bought {
+    text-decoration: line-through;
+}
+
+/*
+*
+* Права колонка - каунтери товарів на складі/куплених
+*
+*/
+
+.bl-bought-item-count, .bl-last-item-count {
+    background-color: rgba(242, 113, 28, 1);
+    padding: 3px 6px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, .80);
+}
+
+.bl-bought-item-count {
+    text-decoration: line-through;
+}
+
+@media (max-width: 1100px) {
+    body {
+        padding: 80px 0 0;
+    }    
+    
+    .shell-bl-bought, .shell-bl-list {
+        padding: 5px;
+    }
+    
+}
+
+@media (max-width: 790px) {
+    body {
+        padding: 90px 0 0;
+    }
+    
+    .shell-bl-bought {
+        width: 100%;
+        min-width: 583px;
+        float: none;
+    }
+
+    .shell-bl-list {
+        width: 100%;
+        min-width: 583px;
+    }
+    
 }
