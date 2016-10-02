@@ -343,3 +343,137 @@ body {
     }
     
 }
+
+/*Бейджик*/
+.badge {
+    position: fixed;
+    bottom: -80px;
+    left: 90px;
+    
+    width: 125px;
+    height: 85px;
+    border-radius: 6px 6px 0 0;
+    
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    
+    padding: 10px 20px 25px 20px;
+    
+    transition: bottom 1s ease, background-color 1s ease;
+}
+
+.badge:hover {
+    bottom: 0px;
+    background-color: blue;
+}
+
+.badge-preview {
+    font-weight: 600;
+    font-size: 21px;
+    text-align: center;
+}
+
+.badge-content {
+    padding-top: 27px;
+}
+
+.badge-content-name {
+    padding-top: 7px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/*Для печаті*/
+@media print {
+    .badge {
+        bottom: 0;
+        background-color: white;
+        color: black;
+        border: 1px solid;
+        
+        height: auto;
+        padding: 0 10px;
+    }
+    
+    .badge-preview {
+        display: none;
+    }
+    
+    .badge-content {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.bl-minus[data-tooltip]::after, .bl-plus[data-tooltip]::after, .bl-buttons-cancel[data-tooltip]::after {
+    background-color: blueviolet;
+    border-radius: 12px;
+    color: white;
+    content: attr(data-tooltip);
+    
+    margin-top: -10px;
+    margin-left: -58px;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 5;
+    
+    transition: all 0.45s ease 0.05s;
+}
+
+.bl-minus[data-tooltip]:hover::after, .bl-plus[data-tooltip]:hover::after, .bl-buttons-cancel[data-tooltip]:hover::after {
+    margin-top: -48px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.add-button::after {
+    white-space: nowrap;
+    background-color: blueviolet;
+    border-radius: 12px;
+    color: white;
+    content: attr(data-tooltip);
+    
+    margin-top: -10px;
+    margin-left: -120px;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 5;
+    
+    transition: all 0.45s ease 0.05s;
+}
+
+.add-button:hover::after {
+    margin-top: -53px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.bl-buttons-boughted[data-tooltip]::after {
+    white-space: nowrap;
+    background-color: blueviolet;
+    border-radius: 12px;
+    color: white;
+    content: attr(data-tooltip);
+    
+    margin-top: -10px;
+    margin-left: -68px;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 5;
+    
+    transition: all 0.45s ease 0.05s;
+}
+
+.bl-buttons-boughted[data-tooltip]:hover::after {
+    margin-top: -43px;
+    opacity: 1;
+    visibility: visible;
+}
