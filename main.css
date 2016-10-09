@@ -51,6 +51,10 @@ body {
 *
 */
 
+#item {
+    display: none;
+}
+
 .add-row-shell {
     padding: 12px 15px;
 }
@@ -76,6 +80,7 @@ body {
 
 .add-field:focus {
     outline: none;
+    border: 1px solid #39c;
 }
 
 .add-button {
@@ -251,6 +256,23 @@ body {
     background-color: #b21e1e;
 }
 
+.bl-minus-nonactive {
+    border-radius: 50%;
+    border: none;
+    
+    color: white;
+    
+    width: 31px;
+    height: 31px;
+    
+    font-size: 18px;
+    font-weight: 500;
+    
+    outline: none;
+    background-color: #8a8080;
+    box-shadow: 0 -.2em 0 0 rgba(34,36,38,.15) inset;
+}
+
 /*Вирівняти по центру символ '-'*/
 .button-minus-label {
     display: inline-block;
@@ -298,6 +320,9 @@ body {
     text-decoration: line-through;
 }
 
+#last-pattern {
+    display: none;
+}
 /*
 *
 * Права колонка - каунтери товарів на складі/куплених
@@ -313,6 +338,10 @@ body {
 
 .bl-bought-item-count {
     text-decoration: line-through;
+}
+
+#bought-pattern {
+    display: none;
 }
 
 @media (max-width: 1100px) {
@@ -407,73 +436,37 @@ body {
     }
 }
 
-.bl-minus[data-tooltip]::after, .bl-plus[data-tooltip]::after, .bl-buttons-cancel[data-tooltip]::after {
-    background-color: blueviolet;
-    border-radius: 12px;
-    color: white;
+/*Підказки*/
+
+button {
+	position: relative;
+	display: inline-block;
+    cursor: pointer;
+}
+
+button::after {
     content: attr(data-tooltip);
-    
-    margin-top: -10px;
-    margin-left: -58px;
-    opacity: 0;
-    padding: 10px;
-    position: absolute;
-    visibility: hidden;
-    z-index: 5;
-    
-    transition: all 0.45s ease 0.05s;
+	visibility: hidden;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	z-index: 999;
+	width: 230px;
+	margin-left: -127px;
+	padding: 10px;
+	opacity: 0;
+	background-color: blueviolet;
+    color: #FFF;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.45s ease-out 0.55s;
 }
 
-.bl-minus[data-tooltip]:hover::after, .bl-plus[data-tooltip]:hover::after, .bl-buttons-cancel[data-tooltip]:hover::after {
-    margin-top: -48px;
-    opacity: 1;
-    visibility: visible;
-}
-
-.add-button::after {
-    white-space: nowrap;
-    background-color: blueviolet;
-    border-radius: 12px;
-    color: white;
-    content: attr(data-tooltip);
+button:hover::after {
+	visibility: visible;
+    bottom: 30px;
+    opacity: 0.9;
     
-    margin-top: -10px;
-    margin-left: -120px;
-    opacity: 0;
-    padding: 10px;
-    position: absolute;
-    visibility: hidden;
-    z-index: 5;
-    
-    transition: all 0.45s ease 0.05s;
-}
-
-.add-button:hover::after {
-    margin-top: -53px;
-    opacity: 1;
-    visibility: visible;
-}
-
-.bl-buttons-boughted[data-tooltip]::after {
-    white-space: nowrap;
-    background-color: blueviolet;
-    border-radius: 12px;
-    color: white;
-    content: attr(data-tooltip);
-    
-    margin-top: -10px;
-    margin-left: -68px;
-    opacity: 0;
-    padding: 10px;
-    position: absolute;
-    visibility: hidden;
-    z-index: 5;
-    
-    transition: all 0.45s ease 0.05s;
-}
-
-.bl-buttons-boughted[data-tooltip]:hover::after {
-    margin-top: -43px;
-    opacity: 1;
-    visibility: visible;
 }

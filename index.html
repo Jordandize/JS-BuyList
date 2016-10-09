@@ -2,134 +2,82 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
+    <title>Hip-hop Album Shop | HAS</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-    <!-- Центральна колнка -->
+    <!-- Центральна колoнка -->
     <div class="bl-background">
         <div class="shell-bl-list">
             <div class="bl-list">
+                
+                <!--        Поле додавання товару       -->
                 <div class="add-row-shell">
                     <div class="add-row">
-                        <input type="text" placeholder="Назва товару" class="add-field" required>
+                        <input type="text" placeholder="Назва товару" class="add-field">
                         <button type="submit" class="add-button" data-tooltip="Додати до списку товар">Додати</button>
                     </div>
                 </div>
-                <!-- Три тестові товари -->
-                <div class="bl-row">
-                    <div class="bl-buttons">
-                        <div class="bl-buttons-shell">
-                            <button class="bl-buttons-boughted" data-tooltip="Списати товар">Купленo</button>
-                            <button class="bl-buttons-cancel" data-tooltip="Видалити товар">×</button>
+                <!--        End:Поле додавання товару       -->
+                
+                <!--            Шаблон товару                -->
+                <div id="item">
+                    <div class="bl-row">
+                        <div class="bl-buttons">
+                            <div class="bl-buttons-shell">
+                                <button class="bl-buttons-boughted" data-tooltip="Списати товар">Купленo</button>
+                                <button class="bl-buttons-cancel" data-tooltip="Видалити товар">×</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bl-product_name">
-                        <span class="bl-product_label">Drake</span>
-                    </div>
-                    <div class="bl-count">
-                        <button class="bl-minus" data-tooltip="Зменшити"><span class="button-minus-label">-</span></button>
-                        <span class="bl-label">5</span>
-                        <button class="bl-plus" data-tooltip="Збільшити">+</button>
-                    </div>
-                </div>
-                <div class="bl-row">
-                    <div class="bl-buttons">
-                        <div class="bl-buttons-shell">
-                            <button class="bl-buttons-boughted"  data-tooltip="Списати товар">Купленo</button>
-                            <button class="bl-buttons-cancel" data-tooltip="Видалити товар">×</button>
+                        <div class="bl-product_name">
+                            <span class="bl-product_label">Pattern</span>
+                            <input type="text" value="Pattern">
                         </div>
-                    </div>
-                    <div class="bl-product_name">
-                        <span class="bl-product_label">Kanye West</span>
-                    </div>
-                    <div class="bl-count">
-                        <button class="bl-minus" data-tooltip="Зменшити"><span class="button-minus-label">-</span></button>
-                        <span class="bl-label">2</span>
-                        <button class="bl-plus" data-tooltip="Збільшити">+</button>
-                    </div>
-                </div>
-                <div class="bl-row">
-                    <div class="bl-buttons">
-                        <div class="bl-buttons-shell">
-                            <button class="bl-buttons-boughted" data-tooltip="Списати товар">Купленo</button>
-                            <button class="bl-buttons-cancel" data-tooltip="Видалити товар">×</button>
-                        </div>
-                    </div>
-                    <div class="bl-product_name">
-                        <span class="bl-product_label">Sia</span>
-                    </div>
-                    <div class="bl-count">
-                            <button class="bl-minus" data-tooltip="Зменшити"><span class="button-minus-label">-</span></button>
-                            <span class="bl-label">7</span>
-                            <button class="bl-plus" data-tooltip="Збільшити">+</button>
-                    </div>
-                </div>
-                <div class="bl-row">
-                    <div class="bl-buttons">
-                        <div class="bl-buttons-shell">
-                            <button class="bl-buttons-boughted" data-tooltip="Списати товар">Купленo</button>
-                            <button class="bl-buttons-cancel" data-tooltip="Видалити товар">×</button>
-                        </div>
-                    </div>
-                    <div class="bl-product_name">
-                        <span class="bl-product_label">Lady Gaga</span>
-                    </div>
-                    <div class="bl-count">
-                            <button class="bl-minus" data-tooltip="Зменшити"><span class="button-minus-label">-</span></button>
+                        <div class="bl-count">
+                            <button class="bl-minus-nonactive" data-tooltip="Зменшити"><span class="button-minus-label">-</span></button>
                             <span class="bl-label">1</span>
                             <button class="bl-plus" data-tooltip="Збільшити">+</button>
+                        </div>
                     </div>
                 </div>
-                <!-- Кінець списку тестових товарів -->
+                <!--            End:Шаблон товару             -->
+                
             </div>
         </div>
+        
             <!-- Права колонка -->
             <div class="shell-bl-bought">
                 <div class="bl-bought">
                     <div class="bl-title"><h3>Залишилося</h3></div>
-                    <div class="bl-row-right">
-                        <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Drake</span>
-                            <span class="bl-last-item-count">5</span>
-                        </span>
-                        <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Kanye West</span>
-                            <span class="bl-last-item-count">2</span>
-                        </span>
-                        <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Sia</span>
-                            <span class="bl-last-item-count">7</span>
-                        </span>
-                        <span class="bl-bought-last">
-                            <span class="bl-row-right-name">Lady Gaga</span>
-                            <span class="bl-last-item-count">1</span>
-                        </span>
-                    </div>
+                        <div class="bl-row-right last">
+                            
+                            <!--        Лейбл залишилося     -->
+                            <span id="last-pattern">
+                                <span class="bl-bought-last">
+                                    <span class="bl-row-right-name">Pattern</span>
+                                    <span class="bl-last-item-count">1</span>
+                                </span>
+                            </span>
+                            <!--    End:Лейбл залишилося    -->
+                            
+                        </div>
                     <div class="bl-title"><h3>Куплено</h3></div>
-                    <div class="bl-row-right">
-                        <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Daft Punk</span>
-                            <span class="bl-bought-item-count">3</span>
+                    <div class="bl-row-right bought">
+                        
+                        <!--      Лейбл куплено      -->
+                        <span id="bought-pattern">
+                            <span class="bl-bought-bought">
+                                <span class="bl-row-bought-name ">Pattern</span>
+                                <span class="bl-bought-item-count">1</span>
+                            </span>
                         </span>
-                        <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Dragons</span>
-                            <span class="bl-bought-item-count">6</span>
-                        </span>
-                        <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Adele</span>
-                            <span class="bl-bought-item-count">7</span>
-                        </span>
-                        <span class="bl-bought-bought">
-                            <span class="bl-row-bought-name">Lady Gaga</span>
-                            <span class="bl-bought-item-count">5</span>
-                        </span>
+                        <!--      End:Лейбл куплено      -->
+                        
                     </div>
                 </div>
             </div>
-            <!-- Кінець правої колонки -->
+            <!--    End:Права колонка        -->
+        
             <div class="badge">
                 <div class="badge-preview">
                 <span>Buy List</span>
@@ -140,5 +88,8 @@
                 </div>
             </div>
         </div>
+    
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
     </body>
 </html>
